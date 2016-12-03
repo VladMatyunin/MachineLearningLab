@@ -29,3 +29,19 @@ class Match:
         if self.home_Team_goal > self.away_Team_goal: return 1
         if self.home_Team_goal == self.away_Team_goal: return 0
         return -1
+
+    def get_team_result(self, team):
+        if self.away_Team == team:
+            if self.away_Team_goal > self.home_Team_goal:
+                return 1
+            elif self.away_Team_goal == self.home_Team_goal:
+                return 0
+            else:
+                return -1
+        else:
+            if self.away_Team_goal < self.home_Team_goal:
+                return 1
+            elif self.away_Team_goal == self.home_Team_goal:
+                return 0
+            else:
+                return -1
