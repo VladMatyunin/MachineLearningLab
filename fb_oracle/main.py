@@ -20,5 +20,5 @@ def research_matches(matches, team_id):
 
 # print match_parse.get_players_func(1218864)
 # print research_matches(ms, 9825)
-# print (match_parse.get_statistics(team_parse.get_team_by_fullname("Arsenal").api_id,
-#                                   team_parse.get_team_by_fullname("Manchester United").api_id))
+print match_parse.get_statistics(team_parse.get_team_by_fullname("Arsenal").api_id,
+                                  team_parse.get_team_by_fullname("Manchester United").api_id)
