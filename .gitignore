@@ -1,9 +1,11 @@
-### Example user template template
-### Example user template
 
 # IntelliJ project files
 .idea
 *.iml
 out
 gen
+fb_oracle/database.sqlite
+fb_oracle/__init__.py
+fb_oracle/sql_db
 # Created by .ignore support plugin (hsz.mobi)
+*/*.pyc
