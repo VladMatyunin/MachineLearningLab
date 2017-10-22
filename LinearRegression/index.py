@@ -3,6 +3,7 @@ import linear_classifier as classifier
 data_frame = pd.read_csv('train.csv')
 data_types = []
 string_data_values = []
+epsilon = 8.883
 classifier = classifier.MyLinearClassifier(80)
 
 for index, row in data_frame.iteritems():
@@ -17,7 +18,7 @@ for index, row in data_frame.iterrows():
             if not string_data_values[j].__contains__(row[j]):
                 string_data_values[j].append(row[j])
             data_index = string_data_values[j].index(row[j])
-            train_data.append(data_index+1)
+            train_data.append((data_index+1)*epsilon)
         else:
             train_data.append(row[j])
     result = row[80]

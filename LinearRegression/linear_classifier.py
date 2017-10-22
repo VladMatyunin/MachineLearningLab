@@ -6,8 +6,8 @@ class MyLinearClassifier:
     def __init__(self, size):
         self.period = 1
         self.size = size+1
-        self.grad_step = 10
-        self.params = np.random.randint(-1, 1, size=size+1)
+        self.grad_step = 1888
+        self.params = np.random.randint(-20, 20, size=size+1)
 
     def fit(self, data, result):
         for i in range(0, len(data)):
@@ -22,7 +22,7 @@ class MyLinearClassifier:
             full_data.append(row_data[i])
         # find out classifier's errors
         for i in range(0, self.size):
-            deltas.append(full_data[i]*(1 / (4 * self.period * self.grad_step*self.size)) *
+            deltas.append(full_data[i]*(1 / (self.period * self.grad_step)) *
                           (np.sum(np.multiply(self.params, full_data)) - row_result))
         self.period += 1
         # apply the errors
